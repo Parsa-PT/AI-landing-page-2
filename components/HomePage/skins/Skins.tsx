@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Skins() {
   return (
-    <div>
+    <div className=' mb-[8rem]'>
        <section className=' flex relative z-20 items-center w-full justify-center -mt-10 '>
             <div className=' w-[329px] md:w-[35rem] lg:w-[55rem] grid grid-cols-2 lg:grid-cols-4 lg:h-[220px] xl:w-[70rem]  justify-items-center items-center  h-[344px] bg-[#F4F8FE] shadow-xl'>
                 {SKINPART.map((item  , index)=>(
