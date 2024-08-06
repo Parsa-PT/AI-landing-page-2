@@ -25,3 +25,31 @@ export const NAVBAR=[
         title:'نمونه دادخواست ها'
     },
 ]
+
+
+export const SKINPART = [
+    {
+        id:1,
+        titile:'پرونده های موفق',
+        icon:'/svgicon/lawsvg.svg',
+        number:'+300'
+    },
+    {
+        id:2,
+        titile:'پرونده حقوقی موفق',
+        icon:'/svgicon/bag.svg',
+        number:'+180'
+    },
+    {
+        id:3,
+        titile:'رضایت موکل',
+        icon:'/svgicon/person.svg',
+        number:'+300'
+    },
+    {
+        id:4,
+        titile:'رضایت شما',
+        icon:'/svgicon/like.svg',
+        number:'+1000'
+    },
+]
