@@ -53,3 +53,19 @@ export const SKINPART = [
         number:'+1000'
     },
 ]
+
+
+export const SEC3 = [
+    {
+        title:'حقوق کیفری'
+    },
+    {
+        title:'امور حقوقی'
+    },
+    {
+        title:'حقوق تجاری'
+    },
+    {
+        title:'حقوق خانواده'
+    },
+]
