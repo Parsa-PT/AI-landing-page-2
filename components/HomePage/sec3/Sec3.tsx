@@ -4,7 +4,7 @@ import { SEC3 } from "@/constant";
 
 export default function Sec3() {
   return (
-    <div className=" mt-20">
+    <div className=" mt-20 mb-20">
       <section className="  w-full h-[65rem] md:h-[411px] lg:h-[500px] xl:h-[620px] 2xl:h-[760px] bg-[#040F35]  px-[33px] py-[22px]">
         <div className=" w-full h-full  relative md:hidden">
           <div className=" absolute w-full h-full">
