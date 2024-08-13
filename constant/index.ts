@@ -1,28 +1,34 @@
 export const NAVBAR=[
     {
         id:1,
-        title:'خانه'
+        title:'خانه',
+        url:'/'
     },
     {
         id:1,
-        title:'وکلا'
+        title:'وکلا',
+        url:'/about-us'
     },
     {
         id:1,
-        title:'درباره ما'
+        title:'درباره ما',
+        url:'/about-us'
     },
     
     {
         id:1,
-        title:'تماس با ما'
+        title:'تماس با ما',
+        url:'/contact-us'
     },
     {
         id:1,
-        title:'وبلاگ'
+        title:'وبلاگ',
+        url:'/essays'
     },
     {
         id:1,
-        title:'نمونه دادخواست ها'
+        title:'نمونه دادخواست ها',
+        url:'/essays'
     },
 ]
 
@@ -81,5 +87,46 @@ export const SEC4 = [
     },
     {
         pic:'/homepic/h-blog3.jpg'
+    },
+]
+
+
+export const SEC5 = [
+    {
+        pic:'/homepic/h-blog1.jpg'
+    },
+    {
+        pic:'/homepic/h-blog2.jpg'
+    },
+    {
+        pic:'/homepic/h-blog3.jpg'
+    },
+    {
+        pic:'/homepic/h-blog3.jpg'
+    },
+    {
+        pic:'/homepic/h-blog3.jpg'
+    },
+    {
+        pic:'/homepic/h-blog3.jpg'
+    },
+]
+
+export const CONTACT = [
+    {
+        title:'026-34847474',
+        pic:'/svgicon/phone.svg'
+    },
+    {
+        title:'09223838374',
+        pic:'/svgicon/phone.svg'
+    },
+    {
+        title:'Test@gmail.com',
+        pic:'/svgicon/mail.svg'
+    },
+    {
+        title:'تهران - ملاصدرا - خیابان شیراز شمالی - نبش کوچه ',
+        pic:'/svgicon/map.svg'
     },
 ]

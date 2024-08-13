@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Button from '@/components/Button'
+import Link from 'next/link'
 
 export default function Aboutus() {
   return (
@@ -16,9 +18,12 @@ export default function Aboutus() {
         <div dir='rtl' className=' px-6 md:max-w-[25rem] lg:max-w-[35rem] mr-4 xl:max-w-[45rem]'>
                 <p className=' h-[2.5rem] w-[5rem] font-bold py-2 px-2  border-r-4  border-[#D4AF37]   text-[#D4AF37]'>درباره ما</p>
                 <h1 className=' text-[32px] mb-4 font-bold'>حسین کاویانی</h1>
-                <p className=' font-bold mb-4'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
-                <p className=' font-bold mb-4'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و ..... </p>
-                <Button style='text-black'/>
+                <p className=' font-bold mb-4 text-justify'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده</p>
+                <p className=' font-bold mb-4 text-justify'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و ..... </p>
+                <Link href='/about-us'>
+                  <Button style='text-black'/>
+
+                </Link>
             </div>
         </section>     
     </div>

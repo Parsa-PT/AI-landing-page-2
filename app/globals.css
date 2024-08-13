@@ -9,6 +9,27 @@
   background-size: cover;
 }
 
+.aboutbg{
+  background-image: url('../public/homepic/about.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.essbg{
+  background-image: url('../public/homepic/ess.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.detailbg{
+  background-image: url('../public/homepic/detail.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .frame{
   background-image: url('../public/homepic/mobileframe.svg');
   background-repeat: no-repeat;

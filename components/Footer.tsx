@@ -7,7 +7,8 @@ export default function Footer() {
       dir="rtl"
       className=" w-full  pb-10 flex flex-col px-[2rem] py-10 bg-[#020A25]"
     >
-      <div className=" flex  justify-between w-full items-center gap-x-2">
+      <div className=" w-full flex flex-col lg:flex-row ">
+      <div className=" flex  justify-between  items-center gap-x-2">
         <div className=" flex  flex-col gap-y-2">
           <div className=" flex items-center  gap-x-2">
             <Image src="/svgicon/logo.svg" alt="pic" width={40} height={100} />
@@ -79,6 +80,8 @@ export default function Footer() {
           </li>
         </ul>
       </div>
+      </div>
+     
 
       <div className='mt-5'>
         <div className=" w-full h-1 rounded-full bg-[#ffffff75]"/>
