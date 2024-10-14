@@ -4,14 +4,14 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
-const lalezar = Lalezar({
-  weight: "400",
-  subsets: ["latin"],
+// const lalezar = Lalezar({
+//   weight: "400",
+//   subsets: ["latin"],
 
-  variable: "--font-lalezar",
-});
+//   variable: "--font-lalezar",
+// });
 
 export const metadata: Metadata = {
   title: "Lawyer",
@@ -25,12 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={lalezar.variable}>
+      <body suppressHydrationWarning={true}  className={inter.className}>
         <Navbar/>
-        <main>
+        <main >
           {children}
         </main>
-        <Footer/>
+        {/* <Footer/> */}
       </body>
     </html>
   );

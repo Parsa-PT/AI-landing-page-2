@@ -1,86 +1,36 @@
-'use client'
-import {useState} from "react";
-import Image from "next/image";
-import { NAVBAR } from "@/constant";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import {motion} from 'framer-motion'
-import { AnimatePresence } from 'framer-motion'
+import Button from './Button'
+import Image from 'next/image'
 
 
-export default function Navbar() {
-  const router = useRouter()
-
-  const [showNav , setShowNav] = useState(false)
-  const [test , setTest] = useState('')
-
+const Navbar = () => {
   return (
-    <div className=" relative">
-      <nav className=" absolute z-50 w-full px-[26px] lg:px-[90px] xl:px-[130px] 2xl:px-[160px] flex justify-between h-[4rem] bg-[#020202be]">
-        <div  className=" flex   items-center gap-x-6 lg:hidden">
-          <Image onClick={()=>setShowNav(!showNav)} src="/svgicon/menu.svg" className=" cursor-pointer" alt="pic" width={30} height={100} />
-          <button onClick={()=> router.push('/contact-us')} className=" text-white py-2 px-5 text-[13px] bg-[#8b8b8b5f] rounded-[10px]">درخواست مشاوره</button>
-        </div>
-        <div className=" lg:flex gap-x-4  hidden items-center flex-row-reverse">
-            <div className=" text-white  text-center ">
-                <p>+98  9946871425</p>
-                <p>تلفن تماس</p>
+    <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-50 ">
+      <div className=" absolute inset-0 backdrop-blur -z-10 md:hidden"/>
+      <div className="containerr px-5 md:px-0">
+        <div className=" flex justify-between items-center md:border  md:border-white/20 md:p-2.5 md:rounded-xl max-w-2xl  mx-auto  md:backdrop-blur ">
+          <div>
+            <div  className=" border h-10 w-10 rounded-lg flex justify-center  items-center border-white/15">
+              {/* <LogoIcon className="h-8 w-8  "/> */}
+              <Image src='/img/logo.png'  alt='tt' className=' w-8 h-8' width={0} height={0}/>
             </div>
-            <hr className=" w-[1px] h-full bg-white opacity-15" />
-            <div className=" text-white  text-center ">
-                <p>8:00 - 20:00</p>
-                <p>ساعت کاری</p>
-            </div>
-        </div>
-        <div onClick={()=> router.push('/')} className=" cursor-pointer flex  items-center gap-x-2">
-          <h1 className=" text-white text-[15px] lg:text-[20px] font-bold">کاویانی</h1>
-          <Image src="/svgicon/logo.svg" alt="pic" width={30} height={100} />
-        </div>
-
-        
-      </nav>
-
-      <AnimatePresence>
-        {showNav && (
-          <>
-          <motion.div animate={{height:480}} exit={{height:0}} initial={{height:0}} className=" overflow-hidden">
-          <ul dir="rtl" className=" flex gap-x-10  pt-20 px-4 text-black   gap-y-5 flex-col whitespace-nowrap">
-              {NAVBAR.map((i , index)=>(
-                <Link key={index} href={i.url}>
-                <motion.li animate={{opacity:100 }} transition={{duration:1}} className=" opacity-0  hover:border-b-[0.35rem] transition-all cursor-pointer ease-in  relative z-30 border-[#e6ba29] text-[17px]">
-                    {i.title}
-                  </motion.li>
-                  <hr  className=" h-[2px] bg-[#D4AF37]"/>
-                </Link>
-                
-              ))}
-              
-           </ul>
-          </motion.div>
-        </>
-        )}
-           
-      </AnimatePresence>
-         
-        
-      <div className=" w-full lg:flex hidden justify-center relative">
-        <div className=" absolute top-20  z-40  w-[78vw] h-[2.7rem]">
-          <div className=" w-full absolute bottom-0 bg-white h-[0.35rem] rounded-full"/>
-             <ul dir="rtl" className=" flex gap-x-10  pt-[11.5px] px-4 text-white whitespace-nowrap">
-                {NAVBAR.map((i , index)=>(
-                  <Link key={index} href={i.url}>
-                  <li className="  hover:border-b-[0.35rem] transition-all cursor-pointer ease-in  relative z-30 border-[#e6ba29] text-[17px]">
-                      {i.title}
-                    </li>
-                  </Link>
-                  
-                ))}
-                
-             </ul>
-             <button onClick={()=> router.push('/contact-us')} className=" -top-2 absolute text-white py-2 px-5 text-[13px] bg-[#8b8b8b5f] rounded-[10px]">درخواست مشاوره</button>
-
+          </div>
+          <div className=" hidden md:block">
+            <nav className=" flex gap-8 text-sm ">
+              <a className=" text-white/70 hover:text-white transition" href="">Features</a>
+              <a className=" text-white/70 hover:text-white transition" href="">Developers</a>
+              <a className=" text-white/70 hover:text-white transition" href="">Pricing</a>
+              <a className=" text-white/70 hover:text-white transition" href="">Changelog</a>
+            </nav>
+          </div>
+          <div className=" flex gap-4 items-center">
+            <Button title="Join waitlist"/>
+             {/* <Menu className="h-8 w-8 md:hidden"/> */}
+             <Image src='/img/menu.svg'  alt='tt' className=' w-7 h-7 md:hidden' width={0} height={0}/>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    </header>
+  )
 }
+
+export default Navbar

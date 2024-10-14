@@ -1,17 +1,18 @@
 import React from 'react'
 
 type styleprop = {
-    style : string
+  title : string
 }
 
-export default function Button({style} : styleprop) {
+export default function Button({title} : styleprop) {
   return (
-    <div>
-      <button className=' w-[40%] relative py-1 mt-3  group lg:py-3 text-white rounded-md border border-[#D4AF37]'>
-                    <span className=' w-[0] group-hover:w-[50%] transition-all ease-in  duration-150 h-full absolute left-0 bg-[#D4AF37] top-0'/>
-                             <p className={`' ${style} transition-all relative z-20  duration-200 '`}>مشاهده بیشتر</p>
-                      <span className=' w-[0] group-hover:w-[50%] transition-all ease-in duration-150 h-full absolute right-0 bg-[#D4AF37] top-0'/>
-        </button>
-    </div>
+    <button className=" text-white  relative py-2 px-3 rounded-lg  font-medium  text-sm bg-gradient-to-b from-[#190d2e] to-[#4a208a] shadow-[0px_0px_12px_#8c45ff] ">
+    <div className=" absolute  inset-0">
+     <div className=" border  rounded-lg border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]"/> 
+     <div className=" border  rounded-lg border-white/40 absolute inset-0 [mask-image:linear-gradient(to_top,black,transparent)]"/> 
+     <div className=" absolute inset-0 shadow-[0_0_10px_rgb(140,69,255,0.7)_inset] rounded-lg "/>
+   </div>
+   <span>{title}</span>
+</button>
   )
 }
